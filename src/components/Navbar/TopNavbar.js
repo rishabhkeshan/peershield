@@ -34,10 +34,10 @@ export default function TopNavbar() {
         >
           SUPPLY CAPITAL
         </Link>
-        <Link className="navbar_topsection_routecontainer_text" to="/">
+        <Link className="navbar_topsection_routecontainer_text" to="/claims">
           CLAIMS
         </Link>
-        <Link className="navbar_topsection_routecontainer_text" to="/">
+        <Link className="navbar_topsection_routecontainer_text" to="/dao">
           DAO
         </Link>
       </div>
