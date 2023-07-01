@@ -11,6 +11,11 @@ function GetCovered() {
   return (
     <article className="getcovered">
       <Navbar />
+      <section className="getcovered_coverssection">
+        <div className="getcovered_coverssection_header">
+          <div className="getcovered_coverssection_header"></div>
+        </div>
+      </section>
     </article>
   );
 }
