@@ -1,3 +1,70 @@
-.getcovered{
-    @apply flex w-full;
+.getcovered {
+  @apply flex w-full mt-64 px-48;
+  &_coverssection {
+    @apply flex w-full flex-col gap-10;
+    &_header {
+      @apply  relative flex w-full flex-row gap-10 py-3 items-center justify-center border-b;
+      &_tabs{
+        @apply flex justify-center space-x-16 text-xl font-semibold;
+        color: #403d43;
+        &_text{
+            @apply text-xl font-bold;
+        }
+      }
+    }
+  }
 }
+.active-tab{
+    color: #000;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.protocol-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.vulnerability {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.details {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.details-label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.details-value {
+  flex-grow: 1;
+  text-align: right;
+}
+
