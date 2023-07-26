@@ -1,0 +1,8 @@
+.app{
+  @apply w-screen h-screen flex;
+  &_main{
+    @apply flex;
+    width: 80vw;
+    background-color: #07030d;
+  }
+}

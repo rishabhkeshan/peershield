@@ -1,12 +1,13 @@
 .getcovered {
-  @apply flex w-full mt-64 px-48;
+  @apply flex w-full mt-64;
   &_coverssection {
-    @apply flex w-full flex-col gap-10;
+    @apply flex w-full flex-col gap-10 px-6;
     &_header {
-      @apply relative flex w-full flex-row gap-10 py-3 items-center justify-center border-b;
+      @apply relative flex w-full flex-row gap-10 py-3 items-center justify-center;
+      border-bottom: 0.5px solid #ababab;
       &_tabs {
         @apply flex justify-center space-x-16 text-xl font-semibold;
-        color: #403d43;
+        color: #cacaca;
         &_text {
           @apply text-xl font-bold;
         }
@@ -17,9 +18,10 @@
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
       &_card {
-        @apply flex flex-col justify-between cursor-pointer p-5 rounded-lg;
-        border: 1px solid #e5e5e5;
+        @apply flex flex-col justify-between cursor-pointer p-5 rounded-lg text-white;
+        // border: 1px solid #e5e5e5;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: #201D26;
         transition: box-shadow 0.3s ease;
         &:hover {
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -29,7 +31,7 @@
   }
 }
 .active-tab {
-  color: #000;
+  color: #ffffff;
 }
 
 .protocol-name {
@@ -59,4 +61,22 @@
 .details-value {
   flex-grow: 1;
   text-align: right;
+}
+.no-covers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.no-covers-image {
+  width: 200px;
+  height: 200px;
+}
+
+.no-covers-text {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #403d43;
 }

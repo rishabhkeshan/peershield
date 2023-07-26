@@ -1,0 +1,35 @@
+.stake {
+  @apply flex w-full mt-72;
+
+  &_cardcontainer {
+    @apply flex w-full gap-10 px-6;
+    &_card {
+      @apply flex flex-col w-full p-8 rounded-lg;
+      height: 350px;
+      background-color: #161419;
+      color: #a59fb1;
+      &_title {
+        @apply text-3xl font-bold text-center;
+      }
+      &_amountcontainer {
+        @apply flex items-center justify-center py-12 gap-3;
+        &_text {
+          @apply text-center text-white text-4xl font-semibold;
+        }
+      }
+      &_inputcontainer {
+        &_input {
+          background-color: #07030d;
+          @apply w-full rounded-lg outline-none py-3 px-4;
+        }
+      }
+      &_buttoncontainer {
+        @apply flex w-full gap-6;
+        &_button {
+          background-color: #07030d;
+          @apply w-full rounded-lg py-3 text-center font-medium cursor-pointer;
+        }
+      }
+    }
+  }
+}

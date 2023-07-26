@@ -3,9 +3,11 @@ import logo from "../../logo.svg";
 import "./GetCoveredPage.scss";
 import Osmosis from "../../assets/Osmosis.svg";
 import MyCover from "../../assets/MyCoverIcon.svg";
+import NoCoversImage from "../../assets/nocovers.svg";
 import { Link, useLocation } from "react-router-dom";
 import { mainnetChains, useAccount, useConnect, useDisconnect } from "graz";
 import Navbar from "../../components/Navbar/Navbar";
+import CoverModal from "../../components/GetCoveredPage/CoverModal";
 
 function GetCovered() {
   const [activeTab, setActiveTab] = useState("allCovers");
@@ -26,6 +28,7 @@ function GetCovered() {
 
   const tabsRef = useRef([]);
 
+
   useEffect(() => {
     function setTabPosition() {
       const currentTab = tabsRef.current[activeTabIndex];
@@ -38,8 +41,13 @@ function GetCovered() {
 
     return () => window.removeEventListener("resize", setTabPosition);
   }, [activeTabIndex]);
-
-
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
+const handleCardClick = (card) => {
+  setSelectedCard(card);
+  setIsModalOpen(true);
+};
   const protocolsData = [
     {
       protocolName: "Osmosis",
@@ -66,6 +74,8 @@ function GetCovered() {
       icon: Osmosis,
     },
   ];
+  const myCoversData = [
+  ];
   return (
     <article className="getcovered">
       <Navbar />
@@ -88,7 +98,7 @@ function GetCovered() {
             })}
           </div>
           <span
-            className="absolute bottom-0 block h-0.5 bg-teal-500 transition-all duration-300"
+            className="absolute bottom-0 block h-0.5 bg-white transition-all duration-300"
             style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
           />
         </div>
@@ -97,13 +107,18 @@ function GetCovered() {
             {protocolsData.map((protocol, index) => (
               <div
                 key={index}
+                onClick={() => handleCardClick(protocol)}
                 className="getcovered_coverssection_allcovers_card"
               >
                 <div className="flex items-start">
-                  <img className="w-12 mr-3 " src={protocol.icon} alt="protocol icon"/>
+                  <img
+                    className="w-12 mr-3 "
+                    src={protocol.icon}
+                    alt="protocol icon"
+                  />
                   <div>
-                  <h3 className="protocol-name">{protocol.protocolName}</h3>
-                  <p className="vulnerability">{protocol.vulnerability}</p>
+                    <h3 className="protocol-name">{protocol.protocolName}</h3>
+                    <p className="vulnerability">{protocol.vulnerability}</p>
                   </div>
                 </div>
                 <div>
@@ -130,7 +145,21 @@ function GetCovered() {
             ))}
           </div>
         )}
+        {((activeTabIndex === 0 && protocolsData.length === 0) ||
+          (activeTabIndex === 1 && myCoversData.length === 0)) && (
+          <div className="no-covers-container">
+            <img
+              src={NoCoversImage}
+              alt="No Covers"
+              className="no-covers-image"
+            />
+            <p className="no-covers-text">No Covers Found</p>
+          </div>
+        )}
       </section>
+      {isModalOpen && selectedCard && (
+        <CoverModal cover={selectedCard} onClose={() => setIsModalOpen(false)}/>
+      )}
     </article>
   );
 }

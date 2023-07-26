@@ -1,0 +1,35 @@
+.sidenav {
+  @apply flex flex-col px-2 py-10 items-center mb-4;
+  width: 20vw;
+  height: 100vh;
+  background-color: #07030d;
+  // background-color: #000000;
+  color: white;
+  &_logocontainer {
+    img {
+      width: 200px;
+    }
+  }
+  &_routecontainer {
+    @apply flex flex-col gap-4 mt-44;
+    color: #403d43;
+    &_text {
+      @apply text-sm font-bold pl-6 pr-4 py-3 rounded-lg;
+    //   background-color: #403d43;
+    //   color: #ffffff84;
+    &_active{
+      background-color: #18161c;
+    }
+    }
+    &_text:hover {
+      color: #fff;
+    }
+  }
+  &_walletcontainer {
+    &_connectbutton {
+      @apply px-6 py-4 text-sm rounded-md font-bold cursor-pointer flex justify-center items-center;
+      background-color: #403d43;
+      width: 200px;
+    }
+  }
+}

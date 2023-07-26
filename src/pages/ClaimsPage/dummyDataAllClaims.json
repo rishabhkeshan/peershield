@@ -1,0 +1,142 @@
+[
+  {
+    "claimId": "#1",
+    "coverageProduct": "Persistence",
+    "claimAmount": "400 XPRT",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#2",
+    "coverageProduct": "Osmosis",
+    "claimAmount": "200 OSMO",
+    "status": "Appeal Window",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#3",
+    "coverageProduct": "AssetMantle",
+    "claimAmount": "100 AMT",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#4",
+    "coverageProduct": "Cosmos",
+    "claimAmount": "300 ATOM",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#5",
+    "coverageProduct": "Persistence",
+    "claimAmount": "250 XPRT",
+    "status": "Appeal Window",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#6",
+    "coverageProduct": "Osmosis",
+    "claimAmount": "150 OSMO",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#7",
+    "coverageProduct": "AssetMantle",
+    "claimAmount": "80 AMT",
+    "status": "Appeal Window",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#8",
+    "coverageProduct": "Cosmos",
+    "claimAmount": "200 ATOM",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#9",
+    "coverageProduct": "Persistence",
+    "claimAmount": "350 XPRT",
+    "status": "Appeal Window",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#10",
+    "coverageProduct": "Osmosis",
+    "claimAmount": "180 OSMO",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#11",
+    "coverageProduct": "AssetMantle",
+    "claimAmount": "120 AMT",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#12",
+    "coverageProduct": "Cosmos",
+    "claimAmount": "280 ATOM",
+    "status": "Appeal Window",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#13",
+    "coverageProduct": "Persistence",
+    "claimAmount": "310 XPRT",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#14",
+    "coverageProduct": "Osmosis",
+    "claimAmount": "220 OSMO",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#15",
+    "coverageProduct": "AssetMantle",
+    "claimAmount": "90 AMT",
+    "status": "Appeal Window",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#16",
+    "coverageProduct": "Cosmos",
+    "claimAmount": "180 ATOM",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#17",
+    "coverageProduct": "Persistence",
+    "claimAmount": "280 XPRT",
+    "status": "Appeal Window",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#18",
+    "coverageProduct": "Osmosis",
+    "claimAmount": "160 OSMO",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#19",
+    "coverageProduct": "AssetMantle",
+    "claimAmount": "110 AMT",
+    "status": "Voting",
+    "action": "Participate"
+  },
+  {
+    "claimId": "#20",
+    "coverageProduct": "Cosmos",
+    "claimAmount": "250 ATOM",
+    "status": "Appeal Window",
+    "action": "Participate"
+  }
+]

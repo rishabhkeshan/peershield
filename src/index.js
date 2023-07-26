@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import { GrazProvider, mainnetChains, } from "graz";
+import { GrazProvider } from "graz";
+import { axelar, cosmoshub, sommelier, mainnetChains, testnetChains } from "graz";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GrazProvider
     grazOptions={{
-      defaultChain: mainnetChains.cosmoshub,
+      defaultChain: testnetChains.osmosistestnet5,
     }}
   >
     <BrowserRouter>

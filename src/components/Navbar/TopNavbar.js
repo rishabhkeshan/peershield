@@ -2,45 +2,48 @@ import React from "react";
 import PeerShield from "../../assets/PeerShield_Dark.svg";
 import MyCover from "../../assets/MyCoverIcon.svg";
 import { Link, useLocation } from "react-router-dom";
-import { mainnetChains, useAccount, useConnect, useDisconnect } from "graz";
+import { useAccount, useConnect, useDisconnect } from "graz";
+import {
+  axelar,
+  cosmoshub,
+  sommelier,
+  mainnetChains,
+  testnetChains,
+} from "graz/chains";
 
 export default function TopNavbar() {
   const location = useLocation();
   const { connect, status } = useConnect();
   const { data: account, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
+  console.log(account);
+
   function handleConnect() {
-    return isConnected ? disconnect() : connect();
+    return isConnected
+      ? disconnect()
+      : connect({ chain: testnetChains.osmosistestnet5 });
   }
+  const getLogoText = () => {
+    switch (location.pathname) {
+      case "/":
+        return "Get Covered";
+      case "/insure":
+        return "Supply Capital";
+      case "/claims":
+        return "Claims";
+      case "/riskassessment":
+        return "Risk Assessment";
+      case "/stake":
+        return "Stake";
+      default:
+        return "";
+    }
+  };
   return (
     <div className="navbar_topsection">
       <Link to="/" className="navbar_topsection_logocontainer">
-        <img src={PeerShield} alt="PeerShield Logo" />
+        {getLogoText()}
       </Link>
-      <div className="navbar_topsection_routecontainer">
-        <Link
-          className={`navbar_topsection_routecontainer_text ${
-            location.pathname === "/" ? "text-white" : ""
-          }`}
-          to="/"
-        >
-          GET COVERED
-        </Link>
-        <Link
-          className={`navbar_topsection_routecontainer_text ${
-            location.pathname === "/insure" ? "text-white" : ""
-          }`}
-          to="/insure"
-        >
-          SUPPLY CAPITAL
-        </Link>
-        <Link className="navbar_topsection_routecontainer_text" to="/claims">
-          CLAIMS
-        </Link>
-        <Link className="navbar_topsection_routecontainer_text" to="/dao">
-          DAO
-        </Link>
-      </div>
       <div className="navbar_topsection_walletcontainer">
         <div
           onClick={handleConnect}
